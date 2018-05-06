@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 USE burgers_db;
 
@@ -8,7 +9,7 @@ CREATE TABLE burgers (
 	PRIMARY KEY (id)
 );
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Donatello', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Leonardo', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Michaelangelo', false);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Raphael', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Double cheeseburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie cheeseburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('BBQ bacon cheeseburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Turkey cheeseburger', false);

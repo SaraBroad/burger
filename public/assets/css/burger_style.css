@@ -13,3 +13,13 @@ h1 {
     font-family: 'Righteous', cursive;
     margin-left: 490px;
 }
+
+input {
+    length: 200px;
+    height: 50px;
+}
+
+#button {
+    text-align: center;
+}
+
