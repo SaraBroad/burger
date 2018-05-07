@@ -20,10 +20,12 @@ var orm = {
         });
     },
 
-    updateOne: function (table_name, cols, vals, func) {
-        // var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+    updateOne: function (table_name, objsColsVals, condition, func) {
         var queryString = "UPDATE " + table_name;
-        queryString +=
+        queryString += " SET "
+        queryString += objToSql(objsColsVals);
+        queryString += " WHERE "
+        queryString += "condition"
             connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
                 if (err) throw err;
                 console.log(result);
