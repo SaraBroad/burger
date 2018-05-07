@@ -41,16 +41,17 @@ function getQues(number) {
 }
 
 function objToSql(ob) {
+    var array = [];
     for (var key in ob) {
-        var array = [];
         var value = ob[key];
         if (Object.hasOwnProperty.call(ob, key)) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
+            array.push(key + "=" + value);
         }
     }
-
+            return array.toString();
 }
 
 module.exports = orm;
