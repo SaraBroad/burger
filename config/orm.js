@@ -11,11 +11,11 @@ var orm = {
     },
     insertOne: function (table_name, cols, vals, func) {
         var queryString = "INSERT INTO " + table_name;
-        queryString += " (" + cols.join(', ') + ") ";
+        queryString += " (" + cols.toString() + ") ";
         queryString += "VALUES (" + getQues(vals.length) + ")"
         connection.query(queryString, vals, function (err, result) {
-            if (err) throw err;
             console.log(result);
+            if (err) throw err;
             func(result);
         });
     },
@@ -34,26 +34,7 @@ var orm = {
     }
 }
 
-function getQues(number) {
-    var quesArray = [];
-    for (var i = 0; i < number.length; i++) {
-        quesArray.push("?");
-    }
-    return quesArray.join(", ");
-}
 
-function objToSql(ob) {
-    var array = [];
-    for (var key in ob) {
-        var value = ob[key];
-        if (Object.hasOwnProperty.call(ob, key)) {
-            if (typeof value === "string" && value.indexOf(" ") >= 0) {
-                value = "'" + value + "'";
-            }
-            array.push(key + "=" + value);
-        }
-    }
-            return array.toString();
-}
+
 
 module.exports = orm;

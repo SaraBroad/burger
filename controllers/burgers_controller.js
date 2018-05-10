@@ -2,9 +2,10 @@
 // burger.js
 
 
-var burger = require("../models/burger.js");
+
 var express = require("express");
 var router = express.Router();
+var burger = require("../models/burger.js");
 
 router.get("/", function(req, res){
     burger.selectAll(function(data){
@@ -16,7 +17,7 @@ router.get("/", function(req, res){
     });
 });
 
-router.post("/", function(req, res){
+router.post("/api/burgers", function(req, res){
     burger.insertOne([
         "name", "devoured"
     ], [ 

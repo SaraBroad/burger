@@ -18,6 +18,8 @@
   {{/each}}
 </ul> --}}
 
+
+
  <div id="container">
         <div id="burger-image">
             <img src="/assets/img/burger.png">
@@ -25,18 +27,25 @@
         <h1>Eat-Da-Burger</h1> 
     </div>
 
+<ul>
+    {{#each burger}}
+        <p>{{burger_name}}</p>
+    {{/each}}
+</ul>
 
       <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                 </div>
                 <div class="col-sm-4">
-                    <form action="/" method = "POST">
-                        <input type="text" class="form-control form-control-sm text-center" id="inputburger" aria-describedby="burgers">
-                        <br>
-                        <div id="button">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                    {{!-- <form action="/" method = "POST"> --}}
+                    <form class="create-form">
+                        <div class="form-group">
+                        <label for="burger_name"></label>
+                        <input type="text" class="form-control form-control-sm text-center" id="burger_name" name="burger_name">
                         </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Submit</button>    
                     </form>
                 </div>
                 <div class="col-sm-4">
@@ -45,3 +54,34 @@
         </div>
         <h3 style="text-align: center">Enter a burger you want to eat and click the "submit" button</h3>
     </div>
+
+{{!-- <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> --}}
+
+
+
+{{!-- 
+      <div class="form-group">
+    <label for="ca">Cat Name:</label>
+    <input type="text" id="ca" name="name">
+  </div> --}}
+
+  {{!-- <div class="form-group">
+    <label for="sleepy">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div> --}}
