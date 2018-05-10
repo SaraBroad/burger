@@ -1,0 +1,47 @@
+{{!-- <h1>Eat Da Burger!</h1> --}}
+
+{{!-- <ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> cats/cat-block sleep=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Cats that are sleepy!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if sleepy}}
+      {{> cats/cat-block sleep=false}}
+    {{/if}}
+  {{/each}}
+</ul> --}}
+
+ <div id="container">
+        <div id="burger-image">
+            <img src="/assets/img/burger.png">
+        </div>
+        <h1>Eat-Da-Burger</h1> 
+    </div>
+
+
+      <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <form action="/" method = "POST">
+                        <input type="text" class="form-control form-control-sm text-center" id="inputburger" aria-describedby="burgers">
+                        <br>
+                        <div id="button">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
+        <h3 style="text-align: center">Enter a burger you want to eat and click the "submit" button</h3>
+    </div>
