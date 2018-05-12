@@ -29,6 +29,7 @@ input {
     width: 200px;
     height: 50px;
     margin-left: 400px;
+    float: left;
 }
 
 .devour-box {
@@ -36,6 +37,8 @@ input {
     background-color: white;
     width: 200px;
     height: 50px;
-    margin-right: 200px;
+    margin-left: 100px;
+    list-style-type: none;
+    text-align: center;
 }
 

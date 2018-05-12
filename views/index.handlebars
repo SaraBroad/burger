@@ -1,24 +1,3 @@
-{{!-- <h1>Eat Da Burger!</h1> --}}
-
-{{!-- <ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul> --}}
-
-
 
  <div id="container">
         <div id="burger-image">
@@ -27,16 +6,8 @@
         <h1>Eat-Da-Burger</h1> 
     </div>
 
-{{!-- <ul>
-    {{#each burger}}
-        {{#unless this.devoured}}
-        <p class="burger-box">{{this.id}} {{this.burger_name}}</p>
-        {{/unless}}
-    {{/each}}
-</ul> --}}
-
-
 <div class="row">
+
     <div class="col-xs-6 text-center">
         <div class="row">
         {{#each burger}} {{#unless this.devoured}}
@@ -44,17 +15,18 @@
             <p class="burger-box">{{this.id}} {{this.burger_name}}</p>
         </div>
          <div class="col-xs-3">
-            <input type="hidden" name="devoured" value="true">
-            <button class="btn btn-primary devour-btn" type="submit">Devour It!</button>
+            <input type="hidden" name="devoured" value="1">
+            {{!-- <button class="btn btn-primary devour-btn" type="submit">Devour It!</button> --}}
+            <button data-burgerid="{{this.id}}" class="btn btn-primary devour-btn">Devour It!</button>
             {{!-- </form> --}}
         </div>
         {{/unless}} {{/each}}
     </div>        
  </div>
 
-    <div class="col-sm-6" class="devour-box">
-        {{#each burgers}} {{#if this.devoured}}
-        <li>
+    <div class="col-sm-6">
+        {{#each burger}} {{#if this.devoured}}
+        <li class="devour-box">
             {{this.id}} {{this.burger_name}}
         </li>
         {{/if}} {{/each}}
@@ -67,7 +39,6 @@
                 <div class="col-sm-4">
                 </div>
                 <div class="col-sm-4">
-                    {{!-- <form action="/" method = "POST"> --}}
                     <form class="create-form">
                         <div class="form-group">
                         <label for="burger-name"></label>
@@ -84,4 +55,3 @@
         <h3 style="text-align: center">Enter a burger you want to eat and click the "submit" button</h3>
     </div>
 
-{

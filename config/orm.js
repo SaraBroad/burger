@@ -25,8 +25,8 @@ var orm = {
         queryString += " SET "
         queryString += objToSql(objsColsVals);
         queryString += " WHERE "
-        queryString += "condition"
-            connection.query(queryString, [table_name, colToSearch, valOfCol], function (err, result) {
+        queryString += condition;
+            connection.query(queryString, function (err, result) {
                 if (err) throw err;
                 console.log(result);
                 func(result);
