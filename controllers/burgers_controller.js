@@ -38,17 +38,6 @@ router.post('/burgers', function(req, res) {
       res.redirect('/');
     });
   });
-
-
-  router.put('/burgers/:id', function(req, res) {
-    var condition = 'id = ' + req.params.id;
-  
-    burger.updateOne({
-      devoured: true
-    }, condition, function(data) {
-      res.redirect('/');
-    });
-  });
   
 
 module.exports = router;
