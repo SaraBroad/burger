@@ -19,7 +19,23 @@ input {
     height: 50px;
 }
 
-#button {
-    text-align: center;
+.btn {
+    margin-left: 150px;
+}
+
+.burger-box {
+    border: 1px solid black; 
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin-left: 400px;
+}
+
+.devour-box {
+    border: 1px solid black; 
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin-right: 200px;
 }
 
